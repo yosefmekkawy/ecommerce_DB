@@ -46,7 +46,7 @@ $employee_access = ['id','name'];
                 foreach($employee_access as $access){
                     echo '<td>'.$user[$access].'</td>';
                 }
-                echo '<td class="d-flex gap-2 justify-content-center"><button class="btn btn-primary">Edit</button><button class="btn btn-danger">Delete</button></td>';
+                echo '<td class="d-flex gap-2 justify-content-center"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" onclick="this.parentElement.parentElement.remove()">Delete</button></td>';
                 echo '</tr>';
             }
             ?>
