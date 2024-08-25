@@ -1,11 +1,11 @@
 <?php
 session_start();
 $title = 'Login';
-include_once "Models/User.php"; // Updated to use OOP
+include_once "Models/User.php"; 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user = new User(); // Instantiate the User class
-    $data_check = $user->login($_POST['email'], $_POST['password']); // OOP login function
+    $user = new User(); 
+    $data_check = $user->login($_POST['email'], $_POST['password']); 
 
     if ($data_check) {
         $_SESSION['email'] = $_POST['email'];
