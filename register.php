@@ -1,11 +1,11 @@
 <?php
 session_start();
 $title = 'Register';
-include_once "Models/User.php"; // OOP User class
+include_once "Models/User.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user = new User(); // Instantiate the User class
-    $check_email = $user->checkEmailExists($_POST['email']); // Check if email exists
+    $user = new User(); 
+    $check_email = $user->checkEmailExists($_POST['email']);
 
     if (!$check_email) {
         $data_check = $user->register($_POST['username'], $_POST['email'], $_POST['password'], $_POST['phone']);
