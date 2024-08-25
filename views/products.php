@@ -1,8 +1,9 @@
 
 <?php
-
+session_start();
 include_once '../Models/productsModel.php';
-
+include_once __DIR__ . '/../guard/check_user_login.php';
+check_login();
 $order = isset($_GET['order']) && $_GET['order'] == 'desc' ? 'desc' : 'asc';
 
 $data = get_products($order);
